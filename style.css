@@ -1,0 +1,364 @@
+*{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+:root{
+    --preto: #000000;
+    --escura: #181818;
+    --azul: #1e96fc;
+    --branco: #FFFFFF
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+html{
+    scroll-behavior: smooth; /* deixa o scroll suave*/
+}
+
+/* INICIO HEADER */
+.nav{
+    /* background-color: #181818; */
+    background-color: var(--escura);
+    height: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    position: sticky; /* faz o menu acompanhar o scroll*/ 
+    top: 0; /* faz o menu ficar grudado enquanto acompanha o scroll*/
+    z-index: 9; /* faz com que o menu passe por cima de todos elementos, no caso o numero pode ser até 999*/
+}
+
+.nav-list{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin-right: 28px;
+}
+
+.nav-list a{
+    text-decoration: none;
+    color: var(--branco);
+    padding: 20px;
+    transition: 0.9s;
+}
+
+.nav-list a:hover{
+    color: var(--azul);
+    font-weight: bolder;
+}
+
+.tooltip {
+    position: absolute;
+    top: 100%;
+    /* left: 50%; */
+    transform: translateX(-50%);
+    /* background-color: #f1f1f1; */
+    /* border: 1px solid #ddd;  */
+    /* padding: 10px; */
+    display: none;
+    padding-left: 150px;
+  }
+  
+  a:hover .tooltip {
+    display: block;
+  }
+/* FIM HEADER */
+
+/* INCIO MAIN */
+.main{
+    width: 100%;
+    background-color: var(--preto);
+    height: calc(100vh - 80px);
+    background-image: url("images/thumb-1920-1358310.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    padding-left: 10%;
+}
+
+.main h1{
+    color: var(--branco);
+    font-size: 54px;
+}
+
+.main p{
+    font-size: 24px;
+    font-style: italic;
+    color: var(--branco);
+    margin-top: 10px;
+    margin-bottom: 35px;
+}
+
+.call-to-action{
+    cursor: pointer;
+    background-color: var(--branco);
+    border: 0;
+    padding: 14px;
+    border-radius: 4px;
+    font-size: 18px;
+    font-weight: bold;
+    transition: 0.9s; /* Faz o botão aumentar o tamanho lentamente depois que o comando scale esta ativado*/
+    margin-top: 30px;
+}
+
+.call-to-action:hover{
+    /* transform: scale(1.1); Faz o botão aumentar o tamanho  */
+    background-color: var(--escura);
+    color: var(--azul);
+}
+
+.main a{
+    text-decoration: none;
+    color: var(--escura);
+}
+/* FIM MAIN */
+
+/* INICIO ABOUT */
+.about{
+    background-color: var(--branco);
+    width: 100%;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    font-size: 25px;
+    font-weight: bolder;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.about div{
+    max-width: 50%;
+    padding-right: 40px; /* faz a div não grudar na imagem*/
+}
+
+.about img{
+    max-width: 450px;
+    border-radius: 8px;
+}
+
+.about div h2{
+    font-size: 32px;
+    margin-bottom: 14px;
+}
+/* FIM ABOUT */
+
+/* INICIO DA SOCIAL MEDIA */
+
+.social-media a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    background-color: transparent;
+    border: solid 0.20rem var(--escura);
+    border-radius: 50%;
+    font-size: 2.5rem;
+    color: var(--preto);
+    margin: 1.8rem 0.1rem;
+    transition: 0.5s ease;
+}
+
+.social-media a:hover{
+    background-color: var(--escura);
+    color: var(--branco);
+    box-shadow: 0 0 0.3rem var(--branco);
+}
+/* FIM DA SOCIAL MEDIA */
+
+/* INICIO PROJECTS */
+.projects{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 0px;
+}
+
+.projects h2{
+    font-size: 32px;
+    margin-bottom: 8px;
+    margin-top: 20px;
+}
+
+.projects p{
+    margin-bottom: 40px;
+    font-style: italic;
+    font-weight: bolder;
+}
+
+.project-list{
+    width: 100%;
+    margin-bottom: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.projects img{
+    width: 22%;
+    margin-left: 0.5%;
+    margin-right: 0.5%;
+    opacity: 0.8; /* diminui a visibilidade da imagem para 80% */
+    transition: 0.9s; /* Faz a imagem voltar a visibilidade de 100% mais lentamente */ 
+}
+
+.projects img:hover{
+    opacity: 1; /* volta a visibilidade da imagem para 100% quando passa o mouse em cima*/
+}
+
+/* .action{
+    background-color: var(--escura);
+    border: 0;
+    padding: 12px 28px;
+    border-radius: 4px;
+    font-size: 18px;
+    color: var(--branco);
+    margin-top: 18px;
+    cursor: pointer;
+    transition: 0.9s;
+} */
+
+.action:hover{
+    transform: scale(1.1);
+}
+/* FIM PROJECTS */
+
+/* INCIO CONTATO */
+form{
+    max-width: 45rem;
+    margin: 0.6rem auto;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+form .input-box{ 
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+form .input-box input,
+form textarea{
+    width: 100%;
+    padding: 1rem;
+    font-size: 1rem;
+    color: var(--text-color);
+    background-color: var(--bg-color-02);
+    border-radius: 0.5rem;
+    margin: 0.4rem 0;
+}
+
+form textarea{
+    resize: none;
+}
+/* FIM CONTATO  */
+
+
+/* INCIO RODAPÉ */
+footer{
+    width: 100%;
+    background-color: var(--escura);
+    padding: 60px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--branco);
+}
+
+footer a{
+    text-decoration: none;
+    color: var(--branco);
+}
+
+footer p{
+    margin-left: 12px;
+}
+/* FIM RODAPÉ */
+
+/* RESPONSIVIDADE */
+@media (max-width: 1050px){
+    /* INICIO MAIN */
+    .main h1{
+        font-size:  45px;
+    }
+
+    .main p{
+        font-size: 18px;
+    }
+
+    .main{
+        background-size: cover; /* tenta encaixar a imagem*/
+    }
+    /* FIM MAIN */
+
+    /* INICIO SOBRE */
+    .about{
+        flex-direction: column; /* muda a direção do flex, deixando como coluna*/
+        padding-top: 80px;
+        padding-left: 0;
+        padding-right: 0; 
+        padding-bottom: 0;
+        font-size: 20px;
+    }
+
+    .about div{
+        max-width: 80%;
+    }
+
+    .about div h2{
+        font-size: 45px;
+    }
+
+    .about img{
+        width: 70%;
+        margin-top: 30px;
+    }
+
+    .social-media a{
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: 3rem;
+        height: 3rem;
+        background-color: transparent;
+        border: solid 0.20rem var(--escura);
+        border-radius: 50%;
+        font-size: 1.7rem;
+        color: var(--preto);
+        margin: 1.8rem 0.2rem;
+        transition: 0.5s ease;
+    }
+    /* FIM SOBRE */
+
+    /* INICIO PROJETOS*/
+    .projects img{
+        width: 27.5%;
+    }
+    /* FIM PROJETOS*/
+
+    /* INICIO RODAPÉ */
+    footer{
+        flex-direction: column;
+    } 
+
+    footer h3{
+        font-size: 24px;
+        margin-bottom: 8px;
+    }
+
+    footer p{
+        margin: 0;
+    }
+    /* FIM RODAPE */
+}
