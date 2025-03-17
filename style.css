@@ -1,79 +1,128 @@
-*{
+* {
     margin: 0;
     padding: 0;
     outline: 0;
     box-sizing: border-box;
     text-decoration: none;
-    
 }
 
-:root{
+:root {
     --preto: #000000;
     --escura: #181818;
     --azul: #1e96fc;
-    --branco: #FFFFFF
+    --branco: #FFFFFF;
 }
 
-body{
+body {
     font-family: 'Roboto', sans-serif;
-    /* font-family: "Nunito", sans-serif; */
 }
 
-html{
-    scroll-behavior: smooth; /* deixa o scroll suave*/
+html {
+    scroll-behavior: smooth;
 }
-
 /* INICIO HEADER */
-.nav{
-    /* background-color: #181818; */
+.nav {
     background-color: var(--escura);
     height: 80px;
     width: 100%;
     display: flex;
     justify-content: flex-end;
-    position: sticky; /* faz o menu acompanhar o scroll*/ 
-    top: 0; /* faz o menu ficar grudado enquanto acompanha o scroll*/
-    z-index: 9; /* faz com que o menu passe por cima de todos elementos, no caso o numero pode ser até 999*/
+    position: sticky;
+    top: 0;
+    z-index: 9;
 }
 
-.nav-list{
+.nav-list {
     display: flex;
     align-items: center;
     list-style: none;
     margin-right: 28px;
 }
 
-.nav-list a{
+.nav-list a {
     text-decoration: none;
     color: var(--branco);
     padding: 20px;
-    transition: 0.9s;
+    transition: 0.3s;
 }
 
-.nav-list a:hover{
+.nav-list a:hover {
     color: var(--azul);
-    font-weight: bolder;
+    font-weight: bold;
 }
 
 .tooltip {
     position: absolute;
     top: 100%;
-    /* left: 50%; */
     transform: translateX(-50%);
-    /* background-color: #f1f1f1; */
-    /* border: 1px solid #ddd;  */
-    /* padding: 10px; */
+    display: none;
+    color: var(--branco);
+    background-color: #333;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+a:hover .tooltip {
+    display: block;
+}
+
+/* Estilização do ícone de hambúrguer */
+.nav-hamburger {
+    display: none; /* Escondido em telas grandes */
+    font-size: 2rem;
+    color: var(--branco);
+    cursor: pointer;
+    padding: 20px;
+}
+
+.nav-toggle {
+    display: none; /* Checkbox invisível */
+}
+/* INICIO HEADER
+.nav {
+    background-color: var(--escura);
+    height: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    position: sticky;
+    top: 0;
+    z-index: 9;
+}
+
+.nav-list {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin-right: 28px;
+}
+
+.nav-list a {
+    text-decoration: none;
+    color: var(--branco);
+    padding: 20px;
+    transition: 0.3s;
+}
+
+.nav-list a:hover {
+    color: var(--azul);
+    font-weight: bold;
+}
+
+.tooltip {
+    position: absolute;
+    top: 100%;
+    transform: translateX(-50%);
     display: none;
     padding-left: 150px;
-  }
-  
-  a:hover .tooltip {
-    display: block;
-  }
-/* FIM HEADER */
+}
 
-/* INCIO MAIN */
-.main{
+a:hover .tooltip {
+    display: block;
+} */
+
+/* INICIO MAIN */
+.main {
     width: 100%;
     background-color: var(--preto);
     height: calc(100vh - 80px);
@@ -85,12 +134,12 @@ html{
     padding-left: 10%;
 }
 
-.main h1{
+.main h1 {
     color: var(--branco);
     font-size: 54px;
 }
 
-.main p{
+.main p {
     font-size: 24px;
     font-style: italic;
     color: var(--branco);
@@ -98,71 +147,64 @@ html{
     margin-bottom: 35px;
 }
 
-.call-to-action{
+.call-to-action {
     cursor: pointer;
     background-color: var(--branco);
-    border: 0;
+    border: none;
     padding: 14px;
     border-radius: 4px;
     font-size: 18px;
     font-weight: bold;
-    transition: 0.9s; /* Faz o botão aumentar o tamanho lentamente depois que o comando scale esta ativado*/
+    transition: 0.3s;
     margin-top: 30px;
 }
 
-.call-to-action:hover{
-    /* transform: scale(1.1); Faz o botão aumentar o tamanho  */
+.call-to-action:hover {
     background-color: var(--escura);
     color: var(--azul);
 }
 
-.main a{
+.main a {
     text-decoration: none;
     color: var(--escura);
 }
-/* FIM MAIN */
 
 /* INICIO ABOUT */
-.about{
+.about {
     background-color: var(--branco);
     width: 100%;
-    padding-left: 10%;
-    padding-right: 10%;
-    padding-top: 80px;
-    padding-bottom: 80px;
+    padding: 80px 10%;
     font-size: 25px;
-    font-weight: bolder;
+    font-weight: bold;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.about div{
+.about div {
     max-width: 50%;
-    padding-right: 40px; /* faz a div não grudar na imagem*/
+    padding-right: 40px;
 }
 
-.about img{
+.about img {
     max-width: 450px;
     border-radius: 8px;
 }
 
-.about div h2{
+.about div h2 {
     font-size: 32px;
     margin-bottom: 14px;
 }
-/* FIM ABOUT */
 
-/* INICIO DA SOCIAL MEDIA */
-
-.social-media a{
+/* INICIO SOCIAL MEDIA */
+.social-media a {
     display: inline-flex;
     justify-content: center;
     align-items: center;
     width: 3rem;
     height: 3rem;
     background-color: transparent;
-    border: solid 0.20rem var(--escura);
+    border: solid 0.2rem var(--escura);
     border-radius: 50%;
     font-size: 2.5rem;
     color: var(--preto);
@@ -170,166 +212,131 @@ html{
     transition: 0.5s ease;
 }
 
-.social-media a:hover{
+.social-media a:hover {
     background-color: var(--escura);
     color: var(--branco);
     box-shadow: 0 0 0.3rem var(--branco);
 }
-/* FIM DA SOCIAL MEDIA */
 
 /* INICIO PROJECTS */
-.projects{
+.projects {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 80px 0px;
+    padding: 80px 0;
 }
 
-.projects h2{
+.projects h2 {
     font-size: 32px;
     margin-bottom: 8px;
     margin-top: 20px;
 }
 
-.projects p{
+.projects p {
     margin-bottom: 40px;
     font-style: italic;
-    font-weight: bolder;
+    font-weight: bold;
 }
 
-.project-list{
+.project-list {
     width: 100%;
     margin-bottom: 8px;
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 1%;
 }
 
-.projects img{
+.projects img {
     width: 22%;
-    margin-left: 0.5%;
-    margin-right: 0.5%;
-    opacity: 0.8; /* diminui a visibilidade da imagem para 80% */
-    transition: 0.9s; /* Faz a imagem voltar a visibilidade de 100% mais lentamente */ 
+    opacity: 0.8;
+    transition: 0.3s;
 }
 
-.projects img:hover{
-    opacity: 1; /* volta a visibilidade da imagem para 100% quando passa o mouse em cima*/
+.projects img:hover {
+    opacity: 1;
 }
 
-/* .action{
-    background-color: var(--escura);
-    border: 0;
-    padding: 12px 28px;
-    border-radius: 4px;
-    font-size: 18px;
-    color: var(--branco);
-    margin-top: 18px;
-    cursor: pointer;
-    transition: 0.9s;
-} */
-
-.action:hover{
-    transform: scale(1.1);
-}
-/* FIM PROJECTS */
-
-/* INCIO CONTATO */
-/* Estilização geral do formulário */
+/* INICIO CONTATO */
 form {
-    max-width: 45rem; /* Mantido */
-    margin: 0.6rem auto 2rem; /* Simplificado margin */
+    max-width: 45rem;
+    margin: 0.6rem auto 2rem;
     text-align: center;
-    padding: 1.5rem; /* Adicionado padding interno para mais espaço */
-    background-color: #f9f9f9; /* Fundo leve para destacar o formulário */
-    border-radius: 10px; /* Bordas arredondadas suaves */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil para profundidade */
+    padding: 1.5rem;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Container dos inputs */
 form .input-box {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    gap: 1rem; /* Espaçamento entre os inputs */
+    gap: 1rem;
 }
 
-/* Estilização dos inputs e textarea */
 form .input-box input,
 form textarea {
-    width: 100%; /* Mantido */
-    padding: 0.8rem; /* Mantido */
-    font-size: 1rem; /* Mantido */
-    color: #333; /* Cor do texto escura para contraste */
-    background-color: #fff; /* Fundo branco para os campos */
-    border: 1px solid #ccc; /* Borda leve */
-    border-radius: 0.5rem; /* Mantido */
-    margin: 0.2rem 0; /* Mantido */
-    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Transição suave */
+    width: 100%;
+    padding: 0.8rem;
+    font-size: 1rem;
+    color: #333;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+    margin: 0.2rem 0;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Efeito de foco nos inputs e textarea */
 form .input-box input:focus,
 form textarea:focus {
-    outline: none; /* Remove borda padrão */
-    border-color: black; /* Cor de foco (azul padrão, ajuste conforme sua paleta) */
-    box-shadow: 0 0 5px rgba(67, 71, 75, 0.5); /* Sombra ao focar */
+    outline: none;
+    border-color: var(--escura);
+    box-shadow: 0 0 5px rgba(67, 71, 75, 0.5);
 }
 
-/* Ajuste específico para inputs dentro de .input-box */
 form .input-box input {
-    flex: 1 1 45%; /* Faz os inputs ocuparem 45% da largura, permitindo 2 por linha */
-    min-width: 0; /* Evita overflow em telas menores */
+    flex: 1 1 45%;
+    min-width: 0;
 }
 
-/* Estilização da textarea */
 form textarea {
-    resize: vertical; /* Permite redimensionar apenas verticalmente */
-    min-height: 120px; /* Altura mínima para melhor usabilidade */
+    resize: vertical;
+    min-height: 120px;
 }
 
-/* Título da seção de contato */
 .contact h2 {
     text-align: center;
-    margin-bottom: 1.5rem; /* Mais espaço abaixo do título */
-    font-size: 2rem; /* Tamanho maior para destaque */
-    color: #333; /* Cor escura para contraste */
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    color: #333;
 }
 
-/* Estilização do botão */
 .btn {
     cursor: pointer;
-    /* background-color: #007bff; Cor azul escura (substitua por sua --escura) */
     background-color: var(--escura);
     color: white;
-    border: none; /* Corrigido de border: 0 para border: none */
-    padding: 14px 28px; /* Padding maior para o botão parecer mais clicável */
-    border-radius: 4px; /* Mantido */
-    font-size: 18px; /* Mantido */
-    font-weight: bold; /* Mantido */
-    transition: transform 0.3s ease, background-color 0.3s ease; /* Transição mais rápida */
-    margin-top: 30px; /* Mantido */
-    display: inline-block; /* Garante que o scale funcione corretamente */
+    border: none;
+    padding: 14px 28px;
+    border-radius: 4px;
+    font-size: 18px;
+    font-weight: bold;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    margin-top: 30px;
+    display: inline-block;
 }
 
-/* Efeito hover no botão */
 .btn:hover {
-    transform: scale(1.05); /* Aumenta ligeiramente o botão */
-    background-color: #fff; /* Fundo branco no hover */
-    color: black; /* Texto azul no hover */
-    border: 2px solid #000000; /* Adiciona borda para contraste */
+    transform: scale(1.05);
+    background-color: #fff;
+    color: var(--escura);
+    border: 2px solid var(--escura);
 }
 
-
-
-
-/* FIM CONTATO  */
-
-
-/* INCIO RODAPÉ */
-footer{
+/* INICIO RODAPÉ */
+footer {
     width: 100%;
     background-color: var(--escura);
     padding: 60px 0;
@@ -339,104 +346,252 @@ footer{
     color: var(--branco);
 }
 
-footer a{
+footer a {
     text-decoration: none;
     color: var(--branco);
 }
 
-footer p{
+footer p {
     margin-left: 12px;
 }
-/* FIM RODAPÉ */
+
 
 /* RESPONSIVIDADE */
-@media (max-width: 1050px){
-    /* INICIO MAIN */
-    .main h1{
-        font-size:  45px;
+@media (max-width: 1050px) {
+    /* Header */
+    .nav-list {
+        margin-right: 10px;
     }
 
-    .main p{
-        font-size: 18px;
+    .nav-list a {
+        padding: 15px;
     }
 
-    .main{
-        background-size: cover; /* tenta encaixar a imagem*/
-    }
-    /* FIM MAIN */
-
-    /* INICIO SOBRE */
-    .about{
-        flex-direction: column; /* muda a direção do flex, deixando como coluna*/
-        padding-top: 80px;
-        padding-left: 0;
-        padding-right: 0; 
-        padding-bottom: 0;
-        font-size: 20px;
-    }
-
-    .about div{
-        max-width: 80%;
-    }
-
-    .about div h2{
+    /* Main */
+    .main h1 {
         font-size: 45px;
     }
 
-    .about img{
+    .main p {
+        font-size: 18px;
+    }
+
+    .main {
+        padding-left: 5%;
+    }
+
+    /* About */
+    .about {
+        flex-direction: column;
+        padding: 60px 5%;
+        font-size: 20px;
+    }
+
+    .about div {
+        max-width: 80%;
+        padding-right: 0;
+    }
+
+    .about img {
         width: 70%;
         margin-top: 30px;
     }
 
-    .social-media a{
-        display: inline-flex;
-        justify-content: center;
-        align-items: center;
-        width: 3rem;
-        height: 3rem;
-        background-color: transparent;
-        border: solid 0.20rem var(--escura);
-        border-radius: 50%;
+    /* Social Media */
+    .social-media a {
+        width: 2.5rem;
+        height: 2.5rem;
         font-size: 1.7rem;
-        color: var(--preto);
-        margin: 1.8rem 0.2rem;
-        transition: 0.5s ease;
+        margin: 1.5rem 0.2rem;
     }
-    /* FIM SOBRE */
 
-    /* INICIO PROJETOS*/
-    .projects img{
+    /* Projects */
+    .projects img {
         width: 27.5%;
     }
-    /* FIM PROJETOS*/
+}
 
-    /* INICIO RODAPÉ */
-    footer{
+@media (max-width: 768px) {
+    /* Header */
+    .nav {
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 10px;
+    }
+
+    .nav-hamburger {
+        display: block; /* Mostra o ícone de hambúrguer */
+    }
+
+    .nav-list {
+        display: none; /* Esconde o menu por padrão */
         flex-direction: column;
-    } 
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background-color: var(--escura);
+        margin: 0;
+        padding: 0;
+    }
 
-    footer h3{
+    /* Mostra o menu quando o checkbox é marcado */
+    .nav-toggle:checked + .nav-hamburger ~ .nav-list {
+        display: flex;
+    }
+
+    .nav-list a {
+        padding: 15px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .tooltip {
+        left: 50%;
+        transform: translateX(-50%);
+        padding-left: 0;
+    }
+
+    /* Main */
+    .main {
+        height: auto;
+        min-height: 70vh;
+        padding: 20px 5%;
+        text-align: center;
+    }
+
+    .main h1 {
+        font-size: 36px;
+    }
+
+    .main p {
+        font-size: 16px;
+    }
+
+    .call-to-action {
+        width: 100%;
+        padding: 12px;
+    }
+
+    /* About */
+    .about {
+        padding: 40px 5%;
+        font-size: 18px;
+    }
+
+    .about div {
+        max-width: 100%;
+    }
+
+    .about img {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    /* Social Media */
+    .social-media a {
+        width: 2rem;
+        height: 2rem;
+        font-size: 1.5rem;
+        margin: 1rem 0.2rem;
+    }
+
+    /* Projects */
+    .projects {
+        padding: 40px 5%;
+    }
+
+    .project-list {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .projects img {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    /* Contact */
+    form {
+        padding: 1rem;
+        margin: 0 5%;
+    }
+
+    form .input-box input {
+        flex: 1 1 100%;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    /* Footer */
+    footer {
+        flex-direction: column;
+        padding: 40px 0;
+    }
+
+    footer h3 {
         font-size: 24px;
         margin-bottom: 8px;
     }
 
-    footer p{
+    footer p {
         margin: 0;
     }
-    /* FIM RODAPE */
-
-    /* Responsividade */
 }
-@media (max-width: 768px) {
-    form .input-box input {
-        flex: 1 1 100%; /* Inputs ocupam largura total em telas menores */
+
+@media (max-width: 480px) {
+    /* Header */
+    .nav-list a {
+        font-size: 14px;
+        padding: 12px;
     }
 
-    form {
-        padding: 1rem; /* Reduz padding em telas menores */
+    .nav-hamburger {
+        font-size: 1.5rem;
+        padding: 15px;
+    }
+    
+    /* Main */
+    .main h1 {
+        font-size: 28px;
+    }
+
+    .main p {
+        font-size: 14px;
+    }
+
+    /* About */
+    .about {
+        font-size: 16px;
+    }
+
+    .about div h2 {
+        font-size: 24px;
+    }
+
+    /* Projects */
+    .projects h2 {
+        font-size: 24px;
+    }
+
+    .projects p {
+        font-size: 14px;
+    }
+
+    /* Contact */
+    .contact h2 {
+        font-size: 1.5rem;
+    }
+
+    form .input-box input,
+    form textarea {
+        font-size: 0.9rem;
     }
 
     .btn {
-        width: 100%; /* Botão ocupa toda a largura em telas pequenas */
+        font-size: 16px;
+        padding: 12px;
     }
 }
