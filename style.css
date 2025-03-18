@@ -14,7 +14,8 @@
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
+    /* font-family: 'Roboto', sans-serif; */
+    font-family: 'Nunito', sans-serif;
 }
 
 html {
@@ -78,48 +79,6 @@ a:hover .tooltip {
 .nav-toggle {
     display: none; /* Checkbox invisível */
 }
-/* INICIO HEADER
-.nav {
-    background-color: var(--escura);
-    height: 80px;
-    width: 100%;
-    display: flex;
-    justify-content: flex-end;
-    position: sticky;
-    top: 0;
-    z-index: 9;
-}
-
-.nav-list {
-    display: flex;
-    align-items: center;
-    list-style: none;
-    margin-right: 28px;
-}
-
-.nav-list a {
-    text-decoration: none;
-    color: var(--branco);
-    padding: 20px;
-    transition: 0.3s;
-}
-
-.nav-list a:hover {
-    color: var(--azul);
-    font-weight: bold;
-}
-
-.tooltip {
-    position: absolute;
-    top: 100%;
-    transform: translateX(-50%);
-    display: none;
-    padding-left: 150px;
-}
-
-a:hover .tooltip {
-    display: block;
-} */
 
 /* INICIO MAIN */
 .main {
@@ -330,7 +289,7 @@ form textarea {
 
 .btn:hover {
     transform: scale(1.05);
-    background-color: #fff;
+    background-color: var(--branco);
     color: var(--escura);
     border: 2px solid var(--escura);
 }
@@ -433,6 +392,7 @@ footer p {
         background-color: var(--escura);
         margin: 0;
         padding: 0;
+        
     }
 
     /* Mostra o menu quando o checkbox é marcado */
@@ -444,6 +404,7 @@ footer p {
         padding: 15px;
         width: 100%;
         text-align: center;
+
     }
 
     .tooltip {
