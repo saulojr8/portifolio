@@ -1,0 +1,82 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    background-color: var(--preto);
+    color: var(--branco);
+}
+
+:root {
+    --preto: #000000;
+    --escura: #181818;
+    --azul: #1e96fc;
+    --branco: #FFFFFF;
+}
+
+body{
+    font-family: 'Nunito', sans-serif;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+ul{
+    list-style: none;
+}
+
+.ul-header{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2em
+}
+
+.logotipo_img{
+    width: 120px;
+}
+
+.container{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+} 
+
+.img-certificado{
+    width: 100%;
+    margin: 20px 0 5px;
+    padding-bottom: 3px;
+    border-bottom: 3px solid var(--azul);
+}
+
+.btn {
+    cursor: pointer;
+    background-color: var(--branco);
+    color: var(--escura);
+    border: none;
+    padding: 14px 28px;
+    border-radius: 4px;
+    font-size: 18px;
+    font-weight: bold;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    margin-top: 30px;
+    display: inline-block;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    background-color: var(--azul);
+    color: var(--branco);
+    border: 2px solid var(--branco);
+}
